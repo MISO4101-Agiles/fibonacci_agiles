@@ -1,3 +1,5 @@
+from pip._vendor.distlib.compat import raw_input
+
 _author_ = 'Luis Sebastian Talero'
 
 
@@ -14,15 +16,15 @@ class Fibonacci:
     try:
         number = int(raw_input('Ingresa un numero: '))
         if number < 0:
-            print ('El numero debe ser positivo')
+            print('El numero debe ser positivo')
         elif number == 0:
             print(number)
         elif number == 1:
-            print 0
-            print 1
+            print(0)
+            print(1)
         else:
-            print 0
-            print 1
+            print(0)
+            print(1)
             anterior = 0
             actual = 1
             while 0 <= actual <= number:
@@ -30,6 +32,6 @@ class Fibonacci:
                 anterior = actual
                 actual = aux
                 if actual <= number:
-                    print actual
+                    print(actual)
     except ValueError:
-        print ('Debes ingresar un numero!')
+        print('Debes ingresar un numero!')
